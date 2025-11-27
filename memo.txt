@@ -1,0 +1,60 @@
+리액트
+- UI를 구성하기 위한 자바스크립트 라이브러리
+- 컴포넌트를 기반으로 화면을 효율적으로 재사용/관리할 수 있도록
+설계된 프론트앤드 기술
+- 전통적인 DOM 직접 조작 대신 가상 DOM(Virtual DOM)을 통해 변경된 부분만 최소 내용으로 업데이트 함
+- SPA 개발을 넘어 Next.js 같은 프레임워크와 함께 SSR/CSR/SSG/ISR 등 다양한 렌더링 전략을 지원하는 기술
+
+SPA(Single Page Application)
+- 하나의 HTML 페이지에서 모든 화면 전환을 처리하는 웹 애플리케이션 방식
+- 기존 MPA(Multi Page Application)처럼 페이지 이동 때마다 서버에서 
+html 을 재용청하지 않고, 처음 한 번만 html,css,js를 받아오고 이후 화면 전환은 자바스크립트가 브라우저 내부에서 랜더링을 변경해 처리(페이지 이동처럼 보이더라도 실체는 페이지가 다시 로드되지 않는 구조)
+
+동작 원리
+1. 리액트는 UI를 컴포넌트 단위로 구성함. 화면을 버튼, 카드,리스트처럼 작은 단위의 컴포넌트로 쪼개어 만들고, 각 컴퍼넌트가 자신의 상태와 랜더링 방식을 스스로 관리하도록 함으로 재사용성과 유지보수정을 극대화
+
+2. 상태가 바뀌면 새로운 Virtual DOM 을 만들고, 이번 Virtual DOM 과 비교. 이전 렌더링 때 만들어 두었던Virtual DOM과 어디가 어떻게 달라졌는지 계산
+
+3. 변경된 부분만 실제 DOM에 반영하여 렌더링 비용을 최소화
+
+4. Hook을 통해 상태 관리와 렌더링 사이클을 제어. 함수형 컴퍼넌트에서 상태를 저장하고, 렌더링 시점 전/후에 실행할 로직을 등록할 수 있게 해주며 언제 어떤 조건에서 다시 렌더링해야 하는지 세밀하게 제어
+
+리액트를 위한 기본 틀
+1. 크롬(브라우저)
+2. VS Code
+3. Node.js(LTS 버전)
+4. npm / yarn
+5. Vite
+6. JavaScript ES6 + 기초 문법
+
+리액트 : https://ko.react.dev/
+Vite : https://ko.vite.dev/guide/
+
+프로젝트 만들기
+
+Vite
+차세대 프론트엔드 개발을 위한 초고속 빌드 도구로 기존 번들(Webpack등) 보다 훨씬 빠르게 개발 서버를 실행하고 파일 변경을 처리할 수 있는 도구
+
+  npm create vite@latest 프로젝트명 -- --template react-ts
+
+npm create vite@latest 1_react -- --template react-ts
+
+react
+     .js  : 자바스크립트 소스 파일
+     .jsx : UI가 존재하는 파일
+
+ts(타입스크립트) 
+     .ts: 타입이 있는 자바스크립트 소스 파일
+     .tsx : 타입이 있는 React용 typescript 파일. UI가 존재하는 파일
+
+useState
+컴퍼넌트 안에서 값을 기억하고, 그 값이 바뀌면 화면을 자동으로 다시 그려주는 React 의 상태관리 함수(hook)     
+- 값이 바뀌면 자동으로 화면이 다시 렌더링됨
+   const [state값, state 바꾸는 함수] = useState(초기값);
+
+
+
+
+
+
+
