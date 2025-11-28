@@ -10,7 +10,7 @@ export default function Navbar() {
       <hr />
       <div>
         <h1 className="text-8xl">메뉴</h1>
-        <button className="bg-blue-500 rounded-x1 px-2">버튼</button>
+        <button className="bg-blue-500 rounded-xl px-2">버튼</button>
       </div>
     </>
   );
