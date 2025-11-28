@@ -37,7 +37,11 @@ Vite
 
   npm create vite@latest 프로젝트명 -- --template react-ts
 
-npm create vite@latest 1_react -- --template react-ts
+  npm create vite@latest 1_react -- --template react-ts
+
+  npm create vite@latest 3_array -- --template react
+
+  npm create vite@latest 5_router -- --template react
 
 react
      .js  : 자바스크립트 소스 파일
@@ -51,6 +55,52 @@ useState
 컴퍼넌트 안에서 값을 기억하고, 그 값이 바뀌면 화면을 자동으로 다시 그려주는 React 의 상태관리 함수(hook)     
 - 값이 바뀌면 자동으로 화면이 다시 렌더링됨
    const [state값, state 바꾸는 함수] = useState(초기값);
+
+useReducer
+- 여러 개의 상태 변경을 하나의 규칙으로 통합해서 관리
+- 상태가 객체인 경우, 배열 추가/수정/삭제가 많을 경우, 변경 규칙이 여러 개인 경우..
+
+  const [state, dispatch] = useReducer(reducer, initialState)
+  state: 현재 상태
+  dispatch : 상태 변경 요청 함수
+  reducer: 상태 변경 규치
+  initialState : 초기값
+
+momo
+- props가 바뀌지 않으면 컴퍼넌트를 리렌더링 하지 않음
+- 리액트는 기본적으로 부모가 렌더링되면 자식은 무조건 같이 랜더링됨(불필요한 낭비가 있을 수 있음)
+- 자식 컴포넌트가 많을 때, 리스트 아이템일 때, 버튼/카드 UI 일때 ...
+
+useMemo
+- 무거운 계산 결과를 저장해두고 다시 쓰는 hook 함수
+- 간단한 계산에 사용하면 오히려 더 성능이 나빠짐. 값이 갱신 안됨
+
+useCallback
+- 함수를 새로 만들지 않고 재사용하는 hook 함수
+
+useContext
+- props를 Context에 저장하고 그 값을 꺼내 쓰는 훅
+- props로 자식 컴퍼넌트에 내려보내지 않고, 전역처럼 공유된 값을 쉽고 깔끔하게 사용하는 hook 함수
+
+module.css
+- 해당 컴포넌트에만 적용되는 css 전용 파일
+- 스타일일 전역으로 퍼지지 않고, 그 컴퍼넌트 안에서만 안전하게 적용
+- 컴포넌트 = js + css 를 한 묶음으로 관리하기 위해 사용
+  Button.jsx
+  Button.module.css
+
+styled-components
+- 자바스크립트 코드 안에서 직접 css를 작성해서 스타일이 입혀진 컴퍼넌트를 만드는 라이브러리
+- .css 파일에 따로 쓰지 않고 jsx 코드에서 같이 작성할 수 있음
+- 각 컴퍼넌트마다 고유한 class 명이 자동으로 생성되어 충돌이 없음
+
+Tailwind css
+- React + Vite + Next.js 실무에서 거의 표준처럼 사용되는 css 방식
+- css 파일을 거의 쓰지 않고 className 옵션만으로 스타일을 완성하는 유틸리티 기반 css 프레임워크
+
+  
+
+
 
 
 
