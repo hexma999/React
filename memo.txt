@@ -43,6 +43,8 @@ Vite
 
   npm create vite@latest 5_router -- --template react
 
+  npm create vite@latest 6_todolist -- --template react
+
 react
      .js  : 자바스크립트 소스 파일
      .jsx : UI가 존재하는 파일
